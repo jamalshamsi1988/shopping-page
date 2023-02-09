@@ -1,14 +1,21 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+
+//function
+import { shorten } from '../helpers/function';
+//css
+import style from '../components/Product.module.css';
+
 
 const Product = ({productData}) => {
   return (
-    <div>
-      <img src={productData.image} />
+    <div className={style.container}>
+      <img  src={productData.image} alt='product'/>
 
-      <h3>{productData.title}</h3>
+      <h3>{shorten(productData.title)}</h3>
       <p>{productData.price}</p>
       <div>
-        <a >Deatils</a>
+        <Link to={`/products/${productData.id}`}>Details</Link>
         <div>
             <button>Add to cart</button>
         </div>
