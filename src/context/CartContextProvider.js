@@ -53,7 +53,7 @@ const cartReducer=(state,action)=>{
    }
 }
 
-const CartContext=createContext();
+export const CartContext=createContext();
 
 const CartContextProvider = ({childern}) => {
     const [state,dispatch]=useReducer(cartReducer,initialState);
@@ -64,4 +64,4 @@ const CartContextProvider = ({childern}) => {
   )
 }
 
-export default CartContextProvider
+export default CartContextProvider;
