@@ -12,6 +12,7 @@ const Navbar = () => {
   return (
     <div>
         <Link to='/products'>Products</Link>
+        <Link to='/signup'> Sing Up</Link>
         <div>
             <Link to='/cart'><img src={shopIcon} alt="shopIcon" /></Link>
         

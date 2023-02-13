@@ -10,6 +10,7 @@ import Store from "./components/Store";
 import ProductDetailes from "./components/ProductDetailes";
 import Navbar from "./components/shared/Navbar";
 import ShopCart from "./components/ShopCart";
+import SignUp from "./components/SignUp";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
                 <Route path="/*" element={<Navigate to="/products" />} />
                 <Route path="/products/:id" element={<ProductDetailes />} />
                 <Route path="/cart" element={<ShopCart />} />
+                <Route path="/signup" element={<SignUp />}  />
                 
 
           </Routes>
