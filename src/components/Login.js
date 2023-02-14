@@ -8,29 +8,24 @@ import { notify } from '../helpers/toast';
 import { Link } from 'react-router-dom';
 
 
-const SignUp = () => {
+const Login = () => {
 
     const [data , setData]=useState({
-        name:"",
         email:"",
         password:"",
-        confirmPassword:"",
-        isAccepted:false
+        
     });
     const [errors ,setErrors]=useState({});
     const [touched , setTouched]=useState({});
 
     useEffect(()=>{
-        setErrors(validate(data,"signup"));
+        setErrors(validate(data , "login"));
 
     },[data , touched])
     
     const changeHandler = event =>{
-        if(event.target.name === "isAccepted"){
-            setData({...data , [event.target.name] : event.target.checked})
-        }else{
             setData({...data , [event.target.name] : event.target.value})
-        }
+        
     }
 
     const focusHandler = event =>{
@@ -40,15 +35,13 @@ const SignUp = () => {
     const submitHandler = event =>{
         event.preventDefault();
         if(!Object.keys(errors).length){
-            notify("You signed in successfully!","success");
+            notify("You Loged in successfully!","success");
         }else{
             notify("Invalid data!" , "error")
             setTouched({
-                name:true,
                         email:true,
                         password:true,
-                        confirmPassword:true,
-                        isAccepted:true
+                        
             })
         }
     }
@@ -57,16 +50,8 @@ const SignUp = () => {
     <div>
      
          <form onSubmit={submitHandler}>
-                <h2>Signup</h2>
-                <div> <label>Name</label> 
-                 <input
-                  type='text'
-                   name="name"
-                    value={data.name}
-                    onChange={changeHandler} 
-                  onFocus={focusHandler}/>
-                {errors.name && touched.name && <span>{errors.name}</span>}
-                </div>
+                <h2>Login</h2>
+                
                 <div><label> Email</label>
                 <input type='text' name='email' value={data.email} onChange={changeHandler} onFocus={focusHandler}/>
                 {errors.email && touched.email && <span>{errors.email}</span>}
@@ -74,17 +59,11 @@ const SignUp = () => {
                 <div><label> Password</label><input type='password' name='password'value={data.password} onChange={changeHandler} onFocus={focusHandler}/>
                 {errors.password && touched.password && <span>{errors.password}</span>}
                 </div>
-                <div><label> Confirm Password</label>
-                <input type='password' name='confirmPassword' value={data.confirmPassword} onChange={changeHandler} onFocus={focusHandler}/>
-                {errors.confirmPassword && touched.confirmPassword && <span>{errors.confirmPassword}</span>}
-                </div>
-                <div><label> I accept terms of privacy policy</label>
-                <input type='checkbox' name='isAccepted' value={data.isAccepted} onChange={changeHandler} onFocus={focusHandler}/>
-                {errors.isAccepted && touched.isAccepted && <span>{errors.isAccepted}</span>}
-                </div>
+               
+               
              <div>
-                <Link to='/login'>Login</Link>
-                <button type='submit'>Sign Up</button>
+                <Link to='/signup'>Sign Up</Link>
+                <button type='submit'>Login</button>
              </div>
       
              </form>
@@ -93,4 +72,4 @@ const SignUp = () => {
   )
 }
 
-export default SignUp;
+export default Login;

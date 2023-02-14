@@ -11,6 +11,7 @@ import ProductDetailes from "./components/ProductDetailes";
 import Navbar from "./components/shared/Navbar";
 import ShopCart from "./components/ShopCart";
 import SignUp from "./components/SignUp";
+import Login from "./components/Login";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
                 <Route path="/products/:id" element={<ProductDetailes />} />
                 <Route path="/cart" element={<ShopCart />} />
                 <Route path="/signup" element={<SignUp />}  />
+                <Route path="login" element={<Login />} />
                 
 
           </Routes>
