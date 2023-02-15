@@ -32,4 +32,4 @@ const Cart = ({data}) => {
   )
 }
 
-export default Cart
+export default Cart;
