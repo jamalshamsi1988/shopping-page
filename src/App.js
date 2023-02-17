@@ -12,6 +12,7 @@ import Navbar from "./components/shared/Navbar";
 import ShopCart from "./components/ShopCart";
 import SignUp from "./components/SignUp";
 import Login from "./components/Login";
+import AboutUs from "./components/AboutUs";
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
                 <Route path="/cart" element={<ShopCart />} />
                 <Route path="/signup" element={<SignUp />}  />
                 <Route path="login" element={<Login />} />
+                <Route path="aboutus" element={<AboutUs/>} />
                 
 
           </Routes>

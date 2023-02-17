@@ -18,6 +18,7 @@ const Navbar = () => {
       <Link to='/products'>Products</Link>
         <Link to='/signup'> Sing Up</Link>
         <Link to="/login"> Login</Link>
+        <Link to="/aboutus">About us</Link>
       </div>
         <div className={styles.shopIcon} > 
             <Link to='/cart'><img src={shopIcon} alt="shopIcon" /></Link>
