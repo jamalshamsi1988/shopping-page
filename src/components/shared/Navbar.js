@@ -16,9 +16,9 @@ const Navbar = () => {
     <div className={styles.container}>
       <div className={styles.linksContainer}>
       <Link to='/products'>Products</Link>
-        <Link to='/signup'> Sing Up</Link>
+        <Link to='/signup'> SingUp</Link>
         <Link to="/login"> Login</Link>
-        <Link to="/aboutus">About us</Link>
+        <Link to="/aboutus">AboutUs</Link>
       </div>
         <div className={styles.shopIcon} > 
             <Link to='/cart'><img src={shopIcon} alt="shopIcon" /></Link>

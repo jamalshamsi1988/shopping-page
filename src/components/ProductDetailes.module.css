@@ -2,7 +2,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 150px 150px 50px;
+    margin: 100px 150px 50px;
     padding: 20px;
     text-align: center;
     border: 1px solid silver;
@@ -12,7 +12,7 @@
 }
 
 .image{
-    width: 450px;
+    width: 300px;
 }
 .textContainer{
     border: 1px solid silver;

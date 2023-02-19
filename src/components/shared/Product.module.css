@@ -70,6 +70,7 @@
 }
 .smallButton img {
     width: 20px;
+    color: black;
   }
 
   .buttonContainer button:hover {

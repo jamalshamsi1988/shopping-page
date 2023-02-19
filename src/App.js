@@ -13,6 +13,7 @@ import ShopCart from "./components/ShopCart";
 import SignUp from "./components/SignUp";
 import Login from "./components/Login";
 import AboutUs from "./components/AboutUs";
+import Footer from "./components/shared/Footer";
 
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
                 
 
           </Routes>
+          <Footer/>
        </CartContextProvider>
     </ProductContextProvider>
   );
